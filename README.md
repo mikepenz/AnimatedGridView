@@ -24,7 +24,7 @@ Usage
 ```xml
 <com.tundem.widget.gridview.AnimatedGridView
     ...
-     />
+ />
 ```
 - start the animation by calling following method
 ```java
@@ -34,11 +34,11 @@ animateDeleteCells(mRemovedFieldsToAnimate, 200);
 - you can also define a listener to do something after the fields were removed
 ```java
 setAnimationListener(new AnimationListener() {
-                @Override
-                public void onAnimationFinish() {
-                    ...
-                }
-            });
+        @Override
+        public void onAnimationFinish() {
+            ...
+        }
+    });
 ```
 
 Developed By
