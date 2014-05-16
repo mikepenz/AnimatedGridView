@@ -18,14 +18,15 @@ AnimatedGridView Library is pushed to [Maven Central], so you just need to add t
 
 Usage
 -------------------------
-### via code
-### via xml (sample)
+### via code or via xml (sample)
 
 ```xml
 <com.tundem.widget.gridview.AnimatedGridView
     ...
  />
 ```
+
+### delete fields and animate the gridview
 - start the animation by calling following method
 ```java
 animateDeleteCells(mRemovedFieldsToAnimate, 200);
