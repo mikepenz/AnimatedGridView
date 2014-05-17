@@ -39,6 +39,7 @@ public class AnimatedHeaderGridView extends HeaderGridView {
     /**
      * ANIMATION LOGIC :D
      */
+
     public void animateDeleteRow(Set<Integer> rows, int duration) {
         Set<Integer> cells = new TreeSet<Integer>();
         for (int row : rows) {

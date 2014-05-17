@@ -1,0 +1,8 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="com.tundem.widget.gridview.sample.MainActivity">
+    <!--<item android:id="@+id/action_add"
+          android:title="Add"/>-->
+    <item android:id="@+id/action_remove"
+          android:title="Remove" android:showAsAction="always"/>
+</menu>
