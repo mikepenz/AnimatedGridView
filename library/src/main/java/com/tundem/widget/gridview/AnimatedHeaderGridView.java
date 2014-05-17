@@ -23,14 +23,17 @@ import java.util.TreeSet;
 public class AnimatedHeaderGridView extends HeaderGridView {
     public AnimatedHeaderGridView(Context context) {
         super(context);
+        this.setLayoutAnimation(Helper.getLayoutAnimation());
     }
 
     public AnimatedHeaderGridView(Context context, AttributeSet attrs) {
         super(context, attrs);
+        this.setLayoutAnimation(Helper.getLayoutAnimation());
     }
 
     public AnimatedHeaderGridView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
+        this.setLayoutAnimation(Helper.getLayoutAnimation());
     }
 
     /**
