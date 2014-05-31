@@ -23,7 +23,7 @@ public class SampleAdapter extends AnimatedAdapter {
     Random r = new Random();
 
     public SampleAdapter() {
-        for (int i = 0; i < 500; i++) {
+        for (int i = 0; i < 48; i++) {
             cells.add(r.nextInt(10));
         }
     }
@@ -34,7 +34,8 @@ public class SampleAdapter extends AnimatedAdapter {
     }
 
     @Override
-    public void addItem(Object item) {
+    public void addItem(Object item, boolean visible) {
+        super.addItem(item, visible);
         cells.add((Integer) item);
     }
 
@@ -77,6 +78,8 @@ public class SampleAdapter extends AnimatedAdapter {
         tv.setLayoutParams(lp);
 
         tv.setText(getItem(i).toString());
+
+        super.getView(i, tv, parent);
 
         return tv;
     }

@@ -7,6 +7,7 @@ import android.view.MenuItem;
 
 import com.tundem.widget.gridview.AnimatedGridView;
 
+import java.util.LinkedList;
 import java.util.TreeSet;
 
 
@@ -41,11 +42,11 @@ public class MainActivity extends Activity {
             if (agv.getCount() >= 6) {
                 TreeSet<Integer> row = new TreeSet<Integer>();
                 row.add(0);
-                agv.animateDeleteRow(row, 1000);
+                agv.animateDeleteRow(row, 200);
             }
 
             return true;
-        }/* else if (id == R.id.action_add) {
+        } else if (id == R.id.action_add) {
             LinkedList<Object> items = new LinkedList<Object>();
             items.add(1);
             items.add(2);
@@ -53,9 +54,8 @@ public class MainActivity extends Activity {
             items.add(4);
             items.add(5);
             items.add(6);
-
-            agv.animateAddCells(agv.getCount(), items, 1000);
-        }*/
+            agv.animateAddCells(items, 200);
+        }
         return super.onOptionsItemSelected(item);
     }
 }
