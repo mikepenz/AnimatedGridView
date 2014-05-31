@@ -13,7 +13,7 @@ Including in your project
 AnimatedGridView Library is pushed to [Maven Central], so you just need to add the following dependency to your `build.gradle`.
 
     dependencies {
-      compile 'com.tundem.widget.gridview:library:1.0.0-SNAPSHOT@aar'
+      compile 'com.tundem.widget.gridview:library:1.1.0-SNAPSHOT@aar'
     }
 
 Usage
@@ -41,6 +41,21 @@ setAnimationListener(new AnimationListener() {
         }
     });
 ```
+
+### add fields and animate the gridview
+- start the animation by calling following method
+```java
+	//Items to add:
+	LinkedList<Object> items = new LinkedList<Object>();
+            	items.add(1);
+            	items.add(2);
+            	items.add(3);
+            	items.add(4);
+            	items.add(5);
+            	items.add(6);
+            	//animate the new items
+            	agv.animateAddCells(items, 200);
+ ```
 
 Developed By
 -------
