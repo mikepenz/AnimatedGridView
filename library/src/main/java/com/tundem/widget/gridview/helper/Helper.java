@@ -24,7 +24,7 @@ import java.util.TreeSet;
 
 public class Helper {
 
-    public static void animateAddCells(IAnimatedGridView gridView, LinkedList<Object> cells, int duration) {
+    public static void animateAddCells(IAnimatedGridView gridView, LinkedList<?> cells, int duration) {
         AnimatedAdapter aa = gridView.getAnimatedAdapter();
         if (aa != null) {
             aa.duration = duration;

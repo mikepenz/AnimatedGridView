@@ -22,7 +22,7 @@ public interface IAnimatedGridView {
      * @param cells
      * @param duration
      */
-    public void animateAddCells(LinkedList<Object> cells, int duration);
+    public void animateAddCells(LinkedList<?> cells, int duration);
 
     /**
      * @param rows

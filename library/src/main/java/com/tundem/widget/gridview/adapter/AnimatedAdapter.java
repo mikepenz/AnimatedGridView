@@ -14,13 +14,13 @@ import java.util.List;
 /**
  * Created by mikepenz on 16.05.14.
  */
-public abstract class AnimatedAdapter extends BaseAdapter {
+public abstract class AnimatedAdapter<T> extends BaseAdapter {
     public int duration = 500;
     private List<Integer> newFieldsToAnimate = new LinkedList<Integer>();
 
     abstract public void removeItem(int position);
 
-    public void addItem(Object item, boolean visible) {
+    public void addItem(T item, boolean visible) {
         if (visible) {
             newFieldsToAnimate.add(getCount());
         }

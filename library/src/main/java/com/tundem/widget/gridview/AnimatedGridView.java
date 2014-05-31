@@ -38,7 +38,7 @@ public class AnimatedGridView extends HeaderGridView implements IAnimatedGridVie
     /**
      * ANIMATION LOGIC :D
      */
-    public void animateAddCells(LinkedList<Object> cells, int duration) {
+    public void animateAddCells(LinkedList<?> cells, int duration) {
         Helper.animateAddCells(this, cells, duration);
     }
 
