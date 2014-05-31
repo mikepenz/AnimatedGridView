@@ -43,6 +43,8 @@ public abstract class AnimatedAdapter extends BaseAdapter {
                 @Override
                 public void onAnimationEnd(Animation animation) {
                     ViewCompat.setHasTransientState(view, false);
+                    view.clearAnimation();
+                    view.invalidate();
                 }
 
                 @Override

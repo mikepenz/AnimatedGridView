@@ -1,12 +1,8 @@
 package com.tundem.widget.gridview.helper;
 
 import android.os.Handler;
+import android.support.v4.view.ViewCompat;
 import android.view.View;
-import android.view.animation.AlphaAnimation;
-import android.view.animation.Animation;
-import android.view.animation.AnimationSet;
-import android.view.animation.GridLayoutAnimationController;
-import android.view.animation.TranslateAnimation;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.HeaderViewListAdapter;
@@ -27,21 +23,6 @@ import java.util.TreeSet;
 
 
 public class Helper {
-
-    public static GridLayoutAnimationController getLayoutAnimation() {
-        AnimationSet set = new AnimationSet(true);
-        Animation animation = new AlphaAnimation(0.0f, 1.0f);
-        animation.setDuration(40);
-        set.addAnimation(animation);
-        animation = new TranslateAnimation(Animation.RELATIVE_TO_SELF,
-                0.0f, Animation.RELATIVE_TO_SELF, 0.0f,
-                Animation.RELATIVE_TO_SELF, -1.0f,
-                Animation.RELATIVE_TO_SELF, 0.0f);
-        animation.setDuration(75);
-        set.addAnimation(animation);
-        GridLayoutAnimationController controller = new GridLayoutAnimationController(set);
-        return controller;
-    }
 
     public static void animateAddCells(IAnimatedGridView gridView, LinkedList<Object> cells, int duration) {
         AnimatedAdapter aa = gridView.getAnimatedAdapter();
@@ -89,13 +70,17 @@ public class Helper {
 
             ScaleDownAnimation sa = new ScaleDownAnimation(v);
             sa.setDuration(duration);
+
+            ViewCompat.setHasTransientState(v, true);
             v.startAnimation(sa);
         }
 
+        /*
         BaseAdapter adapter = gridView.getBaseAdapter();
-        if (adapter != null) {
+         if (adapter != null) {
             adapter.notifyDataSetChanged();
         }
+        */
 
 
         final int height = tempHeight;
@@ -105,6 +90,12 @@ public class Helper {
                     for (View v : views) {
                         v.getLayoutParams().height = height;
                     }
+                }
+
+                for (View v : views) {
+                    ViewCompat.setHasTransientState(v, false);
+                    v.clearAnimation();
+                    v.invalidate();
                 }
 
                 BaseAdapter adapter = gridView.getBaseAdapter();

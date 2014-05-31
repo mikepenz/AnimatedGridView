@@ -8,6 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.WrapperListAdapter;
 
 import com.tundem.widget.gridview.adapter.AnimatedAdapter;
+import com.tundem.widget.gridview.helper.AnimationHelper;
 import com.tundem.widget.gridview.helper.Helper;
 import com.tundem.widget.gridview.listener.AnimationListener;
 
@@ -20,17 +21,17 @@ import java.util.Set;
 public class AnimatedHeaderGridView extends HeaderGridView implements IAnimatedGridView {
     public AnimatedHeaderGridView(Context context) {
         super(context);
-        this.setLayoutAnimation(Helper.getLayoutAnimation());
+        this.setLayoutAnimation(AnimationHelper.getLayoutAnimation());
     }
 
     public AnimatedHeaderGridView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        this.setLayoutAnimation(Helper.getLayoutAnimation());
+        this.setLayoutAnimation(AnimationHelper.getLayoutAnimation());
     }
 
     public AnimatedHeaderGridView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-        this.setLayoutAnimation(Helper.getLayoutAnimation());
+        this.setLayoutAnimation(AnimationHelper.getLayoutAnimation());
     }
 
     /**
