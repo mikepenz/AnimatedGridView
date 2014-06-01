@@ -7,6 +7,7 @@ You just have to choose the AnimatedGridView and extend the AnimatedAdapter (whi
 This library also adds a HeaderGridView, like the normal ListView. The HeaderGridView is from the Google
 Source Code of their gallery app.
 
+
 Including in your project
 -------------------------
 ###Using Maven
@@ -58,6 +59,11 @@ items.add(6);
 //animate the new items
 agv.animateAddCells(items, 200);
  ```
+
+Used in following projects
+------
+[Numbers](https://play.google.com/store/apps/details?id=com.tundem.numbersreloaded.free) (Only remove animation)
+
 
 Developed By
 -------
