@@ -67,8 +67,9 @@ Used in following projects
 
 Developed By
 -------
-Mike Penz (@mike_penz)
-http://mikepenz.com
+* Mike Penz 
+ * [mikepenz.com](http://mikepenz.com) - <mikepenz@gmail.com>
+ * [paypal.me/mikepenz](http://paypal.me/mikepenz)
 
 License
 -------
